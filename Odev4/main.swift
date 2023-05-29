@@ -44,7 +44,7 @@ func temizlikEtkisi(fiyat: Float, temizlikOrani: Float) -> Float {
     return fiyat - ((fiyat * temizlikOrani) / 100)
 }
 
-func hesaplaMiktar(cevherKodu: String, taneBuyuklugu: String, temizlikOrani: Float, miktar: Float) {
+func faturaOlustur(cevherKodu: String, taneBuyuklugu: String, temizlikOrani: Float, miktar: Float) {
     print("*********** FATURA *************\n")
     
     print ("Alıcı: \(ad) \(soyad)", terminator: "\n\n")
@@ -52,8 +52,8 @@ func hesaplaMiktar(cevherKodu: String, taneBuyuklugu: String, temizlikOrani: Flo
     //Cevher Türü
     print ("Cevher Türü: \(cevherler[cevherKodu]?.ad ?? "Böyle bir cevher bulunmamaktadır.")")
     
-    let birimFiyat = cevherFiyat(kod: cevherKodu)
     //Normal Fiyat
+    let birimFiyat = cevherFiyat(kod: cevherKodu)
     print ("Normal Birim Fiyat: \(birimFiyat) TON/TL")
     
     //Tane Adı
@@ -88,7 +88,6 @@ func hesaplaMiktar(cevherKodu: String, taneBuyuklugu: String, temizlikOrani: Flo
     
     print("Mega Madencilik, 2016")
     print("************************", terminator: "\n\n")
-    
 }
 
 print("*** Cevher V1.0 ***", terminator: "\n\n")
@@ -118,5 +117,4 @@ let miktar = Float(readLine() ?? "") ?? 0
 
 print("\n**************************\n\n")
 
-
-hesaplaMiktar(cevherKodu: cevherKodu, taneBuyuklugu: taneBuyuklugu, temizlikOrani: temizlikOrani, miktar: miktar)
+faturaOlustur(cevherKodu: cevherKodu, taneBuyuklugu: taneBuyuklugu, temizlikOrani: temizlikOrani, miktar: miktar)
