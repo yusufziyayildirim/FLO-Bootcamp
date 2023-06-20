@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "giris.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
